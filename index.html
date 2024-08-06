@@ -3,26 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
   </head>
   <body>
     <section class="container">
       <div class="modal">
+        <div class="close"></div>
         <h2>How likely are to recommend FrontendPro to someone you know?</h2>
         <div class="container-nums">
-          <button class="btn">1</button>
-          <button class="btn">2</button>
-          <button class="btn">3</button>
-          <button class="btn">4</button>
-          <button class="btn">5</button>
-          <button class="btn">6</button>
-          <button class="btn">7</button>
-          <button class="btn">8</button>
-          <button class="btn">9</button>
-          <button class="btn">10</button>
+          <div class="btn-nums">
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+            <button class="btn">6</button>
+            <button class="btn">7</button>
+            <button class="btn">8</button>
+            <button class="btn">9</button>
+            <button class="btn">10</button>
+          </div>
+
+          <div class="msg">
+            <span>Not likely at all</span>
+            <span>Extremely Likely</span>
+          </div>
         </div>
 
-        <div class="container-buttons"></div>
+        <div class="container-buttons">
+          <button class="btn-action" type="button">Cancel</button>
+          <button class="btn-action submit" type="submit">Submit</button>
+        </div>
       </div>
     </section>
   </body>

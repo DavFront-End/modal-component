@@ -7,9 +7,98 @@
 
 :root {
     --primary-color: #d0cbf3; 
-    --secondary-color: #101832;
+    --secondary-color: #1A1832;
     --terciary-color: #7458f4;
     --quartenary-color: #1a2036;
     --quintenary-color: #5640ab;
     --white: #fff;
+    --gray: #9098b6;
 }
+
+.container {
+    background: var(--primary-color);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+}
+
+.modal {
+    background: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    background: url('./imagens/Frame.png') no-repeat center;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.modal h2 {
+    text-align: center;
+    font-weight: 500;
+    width: 470px;
+    font-size: 1.2rem;
+}
+
+.container-nums {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.btn-nums {
+    display: flex;
+    gap: .8rem;
+}
+
+.msg {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: .7rem;
+}
+
+.btn {
+    padding: .6rem .8rem;
+    border-radius: 10px;
+    background: var(--quartenary-color);
+    border: none;
+    color: var(--gray);
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.container-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-action {
+    padding: .4rem 2rem;
+    color: var(--white);
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid var(--terciary-color);
+    border-radius: 5px;
+}
+
+.submit {
+    background: var(--terciary-color);
+}
+
+
