@@ -36,6 +36,19 @@
     color: var(--white);
 }
 
+.modal-result {
+    background: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+    position: relative;
+    transition: background ease-in-out .5s;
+}
+
 .modal {
     background: var(--secondary-color);
     display: flex;
@@ -46,6 +59,7 @@
     padding: 2rem;
     border-radius: 10px;
     position: relative;
+    transition: background ease-in-out .5s;
 }
 
 .close {
@@ -88,6 +102,8 @@
 }
 
 .btn {
+    height: 50px;
+    width: 50px;
     padding: .6rem .8rem;
     border-radius: 10px;
     background: var(--quartenary-color);
@@ -95,6 +111,12 @@
     color: var(--gray);
     cursor: pointer;
     font-size: 1rem;
+    transition: .5s;
+}
+
+.btn:focus,
+.btn:hover {
+    border: 1px solid var(--gray);
 }
 
 .container-buttons {

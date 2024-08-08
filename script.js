@@ -1,31 +1,48 @@
-const closeButton = document.querySelector('.close');
-const modal = document.querySelector('.modal');
-const cancelAndSubmit = document.querySelectorAll('.btn-action');
-const buttonModal = document.querySelector('.button-modal');
+const btnModal = document.querySelector(".button-modal");
+const modalHidden = document.querySelector(".modal-hidden");
+const btnClose = document.querySelector(".close");
+const btnCancel = document.querySelector(".cancel");
+const btnSubmit = document.querySelector(".submit");
 
-const modalHidden = document.querySelector('.modal-hidden');
-
-function hiddenModal() {
-    return modal.style.display = 'none';
+function showModal() {
+  modalHidden.style.display = "block";
 }
 
-buttonModal.addEventListener('click', () => {
-    if (modalHidden.style.display !== 'flex') {
-         modalHidden.style.display = 'block'
-    }
+function hiddenModal() {
+  modalHidden.style.display = "none";
+}
+
+function hiddenButton() {
+  btnModal.style.display = "none";
+}
+
+function showButton() {
+  btnModal.style.display = "block";
+}
+
+btnModal.addEventListener("click", () => {
+  showModal();
+  hiddenButton();
 });
 
-
-closeButton.addEventListener('click', () => {
-    hiddenModal();
+btnClose.addEventListener("click", () => {
+  hiddenModal();
+  showButton();
 });
 
-cancelAndSubmit.forEach((btn) => {
-    btn.addEventListener('click', () => {
-        hiddenModal();
-    });
-})
+btnCancel.addEventListener("click", () => {
+  hiddenModal();
+  showButton();
+});
 
-document.addEventListener('click', () => {
+btnSubmit.addEventListener("click", () => {
+  hiddenModal();
+  showButton();
+});
+
+document.addEventListener("click", (e) => {
+  if (e.target.className === 'container') {
     hiddenModal();
+    showButton();
+  }
 });
